@@ -1,0 +1,7 @@
+name: Dogpound Theme
+type: theme
+description: A theme based around animal shelters
+core_version_requirement: '^8.9 || ^9'
+base theme: stable
+libraries:
+  - dogpound/dogpound-style

@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implmenting hook_preprocess_html().
+ */
+function dogpound_preprocess_html(&$variables) {
+  //Kint::dump($variables);
+}
