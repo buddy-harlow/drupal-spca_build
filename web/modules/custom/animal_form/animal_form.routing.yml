@@ -1,0 +1,6 @@
+animal_form:
+  path: /animal-form/{count}
+  defaults:
+    _controller: Drupal\animal_form\Controller\AnimalFormController::form
+  requirements:
+    _permission: 'access content'

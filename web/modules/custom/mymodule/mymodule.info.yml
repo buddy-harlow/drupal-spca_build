@@ -1,0 +1,5 @@
+name: 'My Module'
+type: module
+core_version_requirement: 9.x
+description: A module used to RSVP
+package: 'Acquia Module Dev Course'

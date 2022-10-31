@@ -1,0 +1,15 @@
+mymodule.simplecontent:
+  path: '/mycustomroute'
+  defaults:
+    _controller: 'Drupal\mymodule\Controller\FirstController::simpleContent'
+    _title: 'Big guys big webpage'
+  requirements:
+    _permission: 'access content'
+
+mymodule.variablecontent:
+  path: '/mycustomroute/{name_1}/{name_2}'
+  defaults:
+    _controller: 'Drupal\mymodule\Controller\FirstController::variableContent'
+    _title: 'Dynamic Greeting'
+  requirements:
+    _permission: 'access content'
