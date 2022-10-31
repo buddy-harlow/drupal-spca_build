@@ -1,0 +1,4 @@
+name: Animal Form
+type: module
+core_version_requirement: 9.x
+description: A module that utilizes node data and the form API to simplify the animal interest form process
