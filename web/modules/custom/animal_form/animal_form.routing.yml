@@ -1,6 +1,7 @@
-animal_form:
-  path: /animal-form/{count}
+rsvplist.report:
+  path: '/admin/form-submissions'
   defaults:
-    _controller: Drupal\animal_form\Controller\AnimalFormController::form
+    _title: 'Animal Form Submissions'
+    _controller: '\Drupal\animal_form\Controller\AnimalFormSubmissionController::report'
   requirements:
-    _permission: 'access content'
+    _permission: 'Access list of Animal Forms'

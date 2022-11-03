@@ -1,0 +1,5 @@
+services:
+  animal_form.animal_getter:
+    class: Drupal/animal_form/Services/AnimalGetter
+  animal_form.report_generator:
+    class: Drupal/animal_form/Services/ReportGenerator

@@ -1,0 +1,10 @@
+view animal_form:
+  title: 'View Animal Form'
+  description: 'View and submit the Animal Form.'
+access animal_form report:
+  title: 'Access list of Animal Forms'
+  description: 'View the report listing of all Animal Forms submitted'
+administer animal_form:
+  title: 'Administer Animal Form Settings'
+  description: 'Access the Animal Form administrative settings page'
+  restrict access: true

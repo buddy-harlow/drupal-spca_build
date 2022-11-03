@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for animal_form module.
+ */
+
+ /**
+  * Implements hook_schema()
+  */
+function animal_form_schema(){
+  // Create a database table called 'animal_form' with the following columns:
+  // 1) id [serial], 2) uid [int], 3) nid [int], 4) mail [varchar], 5) created [int]
+  $schema['animal_form'] = [
+    'description' => 'Stores email, timestamp, node title for an Animal Form Submission',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier for the record.',
+        'type' => 'serial',
+        'size' => 'small',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'node_title' => [
+        'description' => 'The {node}.title for this Animal Form',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'mail' => [
+        'description' => 'Inquirer\'s email address',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'name' => [
+        'description' => 'Inquirer\'s name',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'created' => [
+        'description' => 'Timestamp for when Animal Form was submitted',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'node' => ['node_title'],
+      'email' => ['mail'],
+      'name' => ['name'],
+    ],
+  ];
+
+  // Create a database table named 'animal_form_enabled' with the following fields:
+  // 1) nid (int)
+  $schema['animal_form_enabled'] = [
+    'description' => 'Tracks whether Animal Form is enabled or not for a node',
+    'fields' => [
+      'nid' => [
+        'description' => 'The {node}.nid that has animal_form enabled.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['nid'],
+  ];
+
+  return $schema;
+}
